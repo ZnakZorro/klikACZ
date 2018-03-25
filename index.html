@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+	<title>es6 klikACZ</title> 
+	<link rel="manifest" href="./klikacz.json">
+	<meta name="viewport" content="width=device-width,initial-scale=1"> 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="mobile-web-app-capable" content="yes"> 
+	<link rel="icon" type="image/png" size="128x128" href="klikacz.png"> 
+	<link rel="shortcut icon" type="image/png" size="128x128" href="klikacz.png"> 
+	<style>
+		.c0{background:#369}.c1{background:#007bff}.c2{background:#6610f2}.c3{background:#6f42c1}.c4{background:#e83e8c}.c5{background:#dc3545}.c6{background:#fd7e14}.c7{background:#ffc107}.c8{background:#28a745}.c9{background:#20c997}.c10{background:#17a2b8}.c11{background:#868e96}.c12{background:#3a3964}.c13{background:#007bff}.c14{background:#868e96}.c15{background:#28a745}.c16{background:#17a2b8}.c17{background:#ffc107}.c18{background:#dc3545}.c19{background:#700014}.c20{background:#0b6e2f}.c21{background:#ea6153}.c22{background:#d14233}.c23{background:#fbfcfc}.c24{background:#cbd0d3}.c5,.c6,.c7,.c9,.c10,.c11,.c14,.c16,.c17,.c18,.c21,.c22,.c24,.c23{color:#222}.c0,.c1.c2,.c3,.c4,.c8,.c12,.c13,.c15,.c19,.c20{color:#fff}
+		*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+		body,button {font:normal 17px Verdana;}
+		body{margin:0.5rem 0; padding:0;}
+		button {
+			min-width: 6.2rem;
+			border: 0;
+			border-radius: 0.5rem;
+			padding: 0.5rem 0;
+			color:white;
+			background:#777;
+			margin:0.25rem;
+		}
+		button:focus {outline:0;}
+		button:active,button:focus{color:white; background:#444;}
+		p {margin:0.2rem 0;}
+		h3 {margin:0 0.5rem;}
+		@media screen and (max-width: 640px){
+			
+		}
+		div div {margin-bottom:1em; border-bottom:1px solid silver;}
+		#info {
+			position: sticky;
+			top: 0;
+			left: 0;
+			background: #eee;
+			color: #222;
+			padding: 0.2rem;
+			overflow: hidden;
+			width: 100%;
+			height: 3.8rem;
+			margin-bottom:1rem;
+		}		
+	</style>
+	<script src="klikacz.js"></script>
+	<script>
+	// DOM READY
+		document.addEventListener('DOMContentLoaded', function() {
+			let app = new Klikacz('http://192.168.1.104:8888','#internetRadio');
+			app.installRadioButtons('#radioStations',1,20);
+			app.installRadioButtons('#hardClick',0,100,10,'pwm','PWM');
+			app.installRadioButtons('#hardClick',15,18,1,'gpio','GPIO');
+		});// dom ready
+	</script>
+	
+</head> 
+<body>
+
+	
+	<h3>Klikacz es6</h3>
+	
+	<div id="internetRadio">
+		<div>
+			<button data-info="radio" data-val="info">Info</button>
+			<button data-info="radio" data-val="play">Play</button>
+			<button data-info="radio" data-val="stop">Stop</button>
+			
+			<button data-info="vol" data-val="50">Vol 50</button>
+			<button data-info="vol" data-val="70">Vol 70</button>
+			<button data-info="vol" data-val="90">Vol 90</button>
+			
+			<button data-info="radio" data-val="prev">Prev</button>
+			<button data-info="radio" data-val="next">Next</button>
+		</div>
+		<div>
+			<button data-info="playlist" data-val="">Playlist</button>
+			<button data-info="folder" data-val="radio">Radio</button>
+			<button data-info="folder" data-val="muzyka">Muzyka</button>
+			<button data-info="folder" data-val="jazz">Jazz</button>
+			<button data-info="folder" data-val="aktualne">Aktual</button>
+		</div>
+	</div>
+	
+	<div id="info"></div>
+	
+	<div id="radioStations"></div>
+	
+	<div id="hardClick"></div>
+	
+	<div id="debug"></div>
+
+
+</body> 
+</html>
