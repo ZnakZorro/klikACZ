@@ -1,0 +1,16 @@
+CACHE MANIFEST
+#2018-03-28:v02 klikACZ
+
+CACHE:
+index.html
+klikacz.png
+klikacz.jpg
+klikacz.ico
+favicon.ico
+
+NETWORK:
+index.html
+
+FALLBACK:
+index.html
+
