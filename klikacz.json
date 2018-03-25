@@ -1,0 +1,22 @@
+{ 
+	"name": "klikACZ", 
+	"short_name": "klikACZ",
+	"description": "klikACZ",
+	"start_url": "index.html",
+	"display": "standalone",
+	
+	"theme_color": "#872657", 
+	"background_color": "#872657", 
+	"appcache_path": "mobi.cache.manifest",
+	"icons": [{ 
+		"src": "klikacz.png", 
+		"sizes": "128x128", 
+		"type": "image/png" 
+	}
+	],
+  "screenshots": [{
+    "src": "klikacz.jpg",
+    "sizes": "600x800",
+    "type": "image/jpeg"
+  }]	
+}
